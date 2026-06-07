@@ -25,7 +25,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
-    "chromatic": "chromatic",
+    "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
