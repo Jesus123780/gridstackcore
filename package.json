@@ -20,11 +20,12 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.lib.json && vite build --config vite.config.lib.ts",
+    "build": "vite build --config vite.config.lib.ts && cp src/lib/index.d.ts dist/index.d.ts",
     "build:storybook": "storybook build",
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
+    "chromatic": "chromatic",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -42,7 +43,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/gridstackcode.git"
+    "url": "https://github.com/Jesus123780/gridstackcore.git"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -54,6 +55,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "chromatic": "^17.3.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
