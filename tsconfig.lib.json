@@ -18,9 +18,24 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "composite": false
+    "composite": false,
+    "allowJs": true
   },
-  "include": ["src/lib/**/*", "src/stories/grid_stack_react_pure_js_module/**/*", "helpers/**/*"]
+  "include": [
+    "src/lib/**/*",
+    "src/stories/grid_stack_react_pure_js_module/components/**/*",
+    "src/stories/grid_stack_react_pure_js_module/engine/**/*",
+    "src/stories/grid_stack_react_pure_js_module/hooks/**/*",
+    "src/stories/grid_stack_react_pure_js_module/store/**/*",
+    "src/stories/grid_stack_react_pure_js_module/types/**/*",
+    "src/stories/grid_stack_react_pure_js_module/utils/**/*",
+    "helpers/**/*"
+  ],
+  "exclude": [
+    "src/stories/grid_stack_react_pure_js_module/__tests__/**/*",
+    "src/stories/grid_stack_react_pure_js_module/__test-utils__/**/*",
+    "src/stories/grid_stack_react_pure_js_module/*.stories.*",
+    "src/stories/grid_stack_react_pure_js_module/index.tsx"
+  ]
 }
