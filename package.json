@@ -1,6 +1,6 @@
 {
   "name": "gridstackcore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pure React GridStack component with collision detection, drag & resize, responsive breakpoints, and smooth animations. Zero external dependencies.",
   "type": "module",
   "main": "./dist/gridstackcore.cjs",
@@ -12,7 +12,8 @@
       "import": "./dist/gridstackcore.js",
       "require": "./dist/gridstackcore.cjs"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/gridstackcore.css",
+    "./dist/gridstackcore.css": "./dist/gridstackcore.css"
   },
   "files": [
     "dist",

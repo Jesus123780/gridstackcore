@@ -137,7 +137,7 @@ export default function GridStack({
   // low-level collision-resolving move when dragging/resizing if preventCollision true
   const resolveCollision = (moving, layoutSnapshot) => {
     if (!preventCollision) return moving;
-    let node = { ...moving };
+    const node = { ...moving };
     // naive approach: if collision, try to push colliding item downwards until no collision
     let collision = findCollision(layoutSnapshot, node);
     const other = layoutSnapshot.filter((l) => l.i !== node.i);
