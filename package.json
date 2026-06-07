@@ -1,0 +1,73 @@
+{
+  "name": "gridstackcore",
+  "version": "1.0.0",
+  "description": "Pure React GridStack component with collision detection, drag & resize, responsive breakpoints, and smooth animations. Zero external dependencies.",
+  "type": "module",
+  "main": "./dist/gridstackcore.cjs",
+  "module": "./dist/gridstackcore.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/gridstackcore.js",
+      "require": "./dist/gridstackcore.cjs"
+    },
+    "./styles": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.lib.json && vite build --config vite.config.lib.ts",
+    "build:storybook": "storybook build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "sb": "storybook dev -p 6006",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "grid",
+    "gridstack",
+    "drag",
+    "drop",
+    "resize",
+    "layout",
+    "dashboard",
+    "responsive",
+    "collision-detection"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/gridstackcode.git"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "vite": "^7.3.1"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  }
+}

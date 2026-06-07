@@ -1,0 +1,29 @@
+# Development files
+src/
+.storybook/
+public/
+node_modules/
+.git/
+.vscode/
+
+# Config files
+vite.config.ts
+vite.config.lib.ts
+tsconfig.json
+tsconfig.app.json
+tsconfig.node.json
+tsconfig.lib.json
+eslint.config.js
+commitlint.config.js
+chromatic.config.json
+
+# Dev artifacts
+*.log
+build-storybook.log
+storybook-static/
+*.local
+
+# Docs (already in package via files field)
+REFACTORING_SUMMARY.md
+USEGRID_CSS_UPDATE.md
+index.html
