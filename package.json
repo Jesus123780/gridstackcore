@@ -1,6 +1,6 @@
 {
   "name": "gridstackcore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pure React GridStack component with collision detection, drag & resize, responsive breakpoints, and smooth animations. Zero external dependencies.",
   "type": "module",
   "main": "./dist/gridstackcore.cjs",
@@ -12,7 +12,8 @@
       "import": "./dist/gridstackcore.js",
       "require": "./dist/gridstackcore.cjs"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/gridstackcore.css",
+    "./dist/gridstackcore.css": "./dist/gridstackcore.css"
   },
   "files": [
     "dist",
@@ -22,10 +23,11 @@
     "dev": "vite",
     "build": "vite build --config vite.config.lib.ts && cp src/lib/index.d.ts dist/index.d.ts",
     "build:storybook": "storybook build",
+    "build-storybook": "storybook build",
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
-    "chromatic": "chromatic",
+    "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -50,7 +52,11 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.2.1",
     "@eslint/js": "^9.39.1",
+    "@storybook/addon-a11y": "^10.4.2",
+    "@storybook/addon-docs": "^10.4.2",
+    "@storybook/react-vite": "^10.4.2",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
@@ -62,6 +68,7 @@
     "globals": "^16.5.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "storybook": "^10.4.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1"
